@@ -46,8 +46,11 @@ def adder_page():
             {errors}
                 <p>Enter your numbers:</p>
                 <form method="post" action=".">
+                    <label for="wt">Weight</label>
                     <p><input name="wt" /></p>
+                    <label for="vol">Volume</label>
                     <p><input name="vol" /></p>
+                    <label for="conc">Concentration</label>
                     <p><input name="conc" /></p>
                     <p><input type="submit" value="Do calculation" /></p>
                 </form>
