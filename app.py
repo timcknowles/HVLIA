@@ -35,7 +35,7 @@ def adder_page():
         if wt is not None and vol is not None and conc is not None:
 
             result = do_calculation(wt, vol, conc)
-            saline = saline_vol(100,do_calculation(wt, vol, conc))
+            saline = saline_vol(100,do_calculation(wt, vol, conc),0.5,0.5,1)
             return render_template ('result.html').format(result=result,saline=saline)
 
     return render_template('calculator.html').format(errors=errors)
