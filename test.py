@@ -18,7 +18,19 @@ def do_calculation(wt,vol,conc):
   print(fraction_LA_Remaining)
   RopiDoseHvlia = round_half_up((fraction_LA_Remaining*maxRopiDose),2)
   print(RopiDoseHvlia)
+  
+
   return round_half_up((RopiDoseHvlia/2),0)
+
+def saline_vol(maxSalVol, ropiVol):
+  return maxSalVol-ropiVol
+
+
+saline = saline_vol(100,do_calculation(110,30,0.25))
+print ("saline vol =" + str(saline) + " " + "mls")
+
+
+
 
 final_vol = round_half_up(do_calculation(110,30,0.25),0)
 print(final_vol)

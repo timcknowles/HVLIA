@@ -1,0 +1,55 @@
+{% extends "material/base.html" %}
+{% block content %}
+    <html>
+        <!-- <body>
+        {errors}
+            <h1>Enter your numbers:</h1>
+            <form method="post" action=".">
+                <label for="wt">Weight</label>
+                <p><input name="wt" /></p>
+                <label for="vol">Volume</label>
+                <p><input name="vol" /></p>
+                <label for="conc">Concentration</label>
+                <p><input name="conc" /></p>
+                <p><input type="submit" value="Do calculation" /></p>
+            </form>
+        </body>
+    </html> -->
+
+    <div class="container">
+      <h1> HVLIA calculator </h1>
+    </div>
+
+    <div class="container">
+        <form method="post" action=".">
+          <div class="row">
+            <div class="input-field col s6">
+                <input name="wt" type="text" class="validate">
+                <label for="weight">Patient Weight (kg) </label>
+            </div>
+            <div class="input-field col s6">
+                <input name="vol" type="text" class="validate">
+                <label for="volume">Block Volume (mls) </label>
+            </div>
+            <div class="input-field col s6">
+                <input name="conc" type="text" class="validate">
+                <label for="concentration">LA concentration (%)</label>
+            </div>
+
+
+            <div>
+                <button id=btn class="waves-effect waves-light btn-large" value="Do calculation"> Submit </button>
+
+
+            </div>
+
+        </form>
+    </div>
+
+
+
+
+
+
+
+{% endblock %}

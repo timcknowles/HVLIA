@@ -1,0 +1,46 @@
+{% extends "material/base.html" %}
+{% block content %}
+
+
+        <p><a href="/">Click here to calculate again</a></p>
+
+<div class="container">
+      <div class="row">
+            <table>
+              <thead>
+                <tr>
+                    <th>Drug Name</th>
+                    <th>Volume (mls)</th>
+
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Ropivicaine 0.2%</td>
+                  <td>{result}</td>
+                </tr>
+                <tr>
+                  <td>Adrenaline (1:1000) 500 mcg</td>
+                  <td>0.5</td>
+                </tr>
+                <tr>
+                  <td>Clonidine (75 mcg)</td>
+                  <td>0.5</td>
+                </tr>
+                <tr>
+                  <td>Ketorolac (30 mg) (If no contraindications)</td>
+                  <td>1.0</td>
+                </tr>
+                <tr>
+                  <td>N. Saline 0.9%</td>
+                  <td>1.0</td>
+                </tr>
+              </tbody>
+            </table>
+
+      </div>
+</div>
+
+
+{% endblock %}
