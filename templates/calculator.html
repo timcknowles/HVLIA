@@ -20,21 +20,29 @@
       <h1> HVLIA calculator </h1>
     </div>
 
-    <div class="container">
         <form method="post" action=".">
+        <div class="container">
           <div class="row">
-            <div class="input-field col s6">
-                <input name="wt" type="text" class="validate">
-                <label for="weight">Patient Weight (kg) </label>
-            </div>
-            <div class="input-field col s6">
-                <input name="vol" type="text" class="validate">
-                <label for="volume">Block Volume (mls) </label>
-            </div>
-            <div class="input-field col s6">
-                <input name="conc" type="text" class="validate">
-                <label for="concentration">LA concentration (%)</label>
-            </div>
+              <div class="col s12 m5">
+                  <div class="card-panel teal">
+                    <span>
+                        <div class="input-field col s12">
+                            <input name="wt" type="text" class="validate">
+                            <label for="weight">Patient Weight (kg) </label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input name="vol" type="text" class="validate">
+                            <label for="volume">Block Volume (mls) </label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input name="conc" value="0.25" type="text" class="validate">
+                            <label for="concentration">LA concentration (%)</label>
+                        </div>
+                    </span>
+                  </div>
+              </div>
+          </div>
+        </div>
 
 
             <div>
