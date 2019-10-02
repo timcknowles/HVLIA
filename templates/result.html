@@ -1,10 +1,61 @@
 {% extends "material/base.html" %}
 {% block content %}
 
+<div class="valign-wrapper row app-box">
+      <div class="col card hoverable s12 offset-l2 l8 center-align">
+            <div class="card-content">
+                  <div class="row">
+                        <div class="col s12 offset-l2 l8 center-align">
+                              <h2> HVLIA Volumes </h2>
+                        </div>
+                  </div>
+                  <div class="row">
+                        <div class="col s12 offset-l2 m8 center-align">
+                              <table>
+                                    <thead>
+                                          <tr>
+                                                <th>Drug Name</th>
+                                                <th>Volume (mls)</th>
+                                          </tr>
+                                    </thead>
+                                    <tbody>
+                                          <tr>
+                                                <td>Ropivicaine 0.2%</td>
+                                                <td>{result}</td>
+                                          </tr>
+                                          <tr>
+                                                <td>Adrenaline (1:1000) 500 mcg</td>
+                                                <td>0.5</td>
+                                          </tr>
+                                          <tr>
+                                                <td>Clonidine (75 mcg)</td>
+                                                <td>0.5</td>
+                                          </tr>
+                                          <tr>
+                                                <td>Ketorolac (30 mg) (If no contraindications)</td>
+                                                <td>1.0</td>
+                                          </tr>
+                                          <tr>
+                                                <td>N. Saline 0.9%</td>
+                                                <td>{saline}</td>
+                                          </tr>
+                                    </tbody>
+                              </table>
+                        </div>
+                  </div>
+                  <div class="row">
+                        <div class="col s12 offset-l2 m8 center-align">
+                              <a class="waves-effect waves-light btn-large" href="/">New calculation</a>
+                        </div>
+
+                  </div>
+            </div>
+      </div>
+</div>
 
 
 
-<div class="container">
+<!-- <div class="container">
       <div class="row">
             <div class="col s12 offset-l2 m8 center-align valign-wrapper">
 
@@ -51,7 +102,7 @@
             </div>
       </div>
 
-</div>
+</div> -->
 
 
 {% endblock %}
