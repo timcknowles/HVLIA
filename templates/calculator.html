@@ -1,6 +1,32 @@
+
 {% extends "material/base.html" %}
+{% import "material/utils.html" as util %}
+
+
+
+{% block head %}
+    <title>{% block title %}{% endblock title %}</title>
+
+    {%- block metas %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%- endblock metas %}
+
+    {%- block styles %}
+    <!-- Materialize. Availible at https://github.com/Dogfalo/materialize -->
+    <!-- Flask-Materialize. Availible at https://github.com/HellerCommaA/flask-materialize -->
+    <link href="{{material_find_resource('css/materialize.css', cdn='material')}}" rel="stylesheet" media="screen">
+
+
+    {%- endblock styles %}
+    <link rel="apple-touch-icon" sizes="512x512" href="/static/images/apple-touch-icon.png" />
+{% endblock %}
+
+
+
 {% block content %}
-<link rel="apple-touch-icon" sizes="512x512" href="apple-icon-icon.png" />
+
+
+
 <div class="valign-wrapper row app-box">
     <div class="col card hoverable s12 offset-l2 l8 center-align">
         <form method="post" action=".">
