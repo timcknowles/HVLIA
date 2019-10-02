@@ -19,6 +19,7 @@ def adder_page():
         wt = None
         vol = None
         conc = None
+        
         try:
             wt = float(request.form["wt"])
         except:
