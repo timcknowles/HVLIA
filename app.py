@@ -14,29 +14,30 @@ app.config["DEBUG"] = True
 def adder_page():
 
 
+
+
     errors = ""
     if request.method == "POST":
+
         wt = None
         vol = None
         conc = None
-        
+        KetVol = 0
+
+
+
         try:
             wt = float(request.form["wt"])
-        except:
-            errors += "<p>{!r} is not a number.</p>\n".format(request.form["wt"])
-        try:
             vol = float(request.form["vol"])
-        except:
-            errors += "<p>{!r} is not a number.</p>\n".format(request.form["vol"])
-        try:
             conc = float(request.form["conc"])
+            KetVol = int(request.form.get('KetVol'))
+            print(KetVol*1000)
         except:
-            errors += "<p>{!r} is not a number.</p>\n".format(request.form["conc"])
+            errors
 
         if wt is not None and vol is not None and conc is not None:
 
             result = do_calculation(wt, vol, conc)
-            saline = saline_vol(100,do_calculation(wt, vol, conc),0.5,0.5,1)
-            return render_template ('result.html').format(result=result,saline=saline)
-
+            saline = saline_vol(100,do_calculation(wt, vol, conc),0.5,0.5,(KetVol))
+            return render_template ('result.html').format(result=result,saline=saline, KetVol=KetVol, wt=wt)
     return render_template('calculator.html').format(errors=errors)
