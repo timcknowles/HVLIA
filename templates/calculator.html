@@ -51,8 +51,17 @@
                     </div>
                     <div class="row">
                         <div class="input-field col s12 offset-l2 l8">
-                            <input value="0.25" input name="conc" type="tel" class="validate">
-                            <label for="concentration"> Block Levobupivicaine Concentration (%)</label>
+                          <select class="browser-default" name="conc">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="0.25">0.25</option>
+                            <option value="0.125">0.125</option>
+                            <option value="0.375">0.375</option>
+                            <option value="0.50">0.50</option>
+                          </select>
+
+
+                            <!-- <input value="0.25" input name="conc" type="tel" class="validate">
+                            <label for="concentration"> Block Levobupivicaine Concentration (%)</label> -->
                         </div>
                     </div>
 
@@ -88,3 +97,13 @@
 
 
 {% endblock %}
+
+
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+         var elems = document.querySelectorAll('select');
+         var instances = M.FormSelect.init(elems, options);
+       });
+    </script>
