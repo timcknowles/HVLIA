@@ -11,6 +11,7 @@
 <html{% block html_attribs %}{% endblock html_attribs %}>
 {%- block html %}
   <head>
+
     {%- block head %}
     <title>{% block title %}{% endblock title %}</title>
 
@@ -22,7 +23,7 @@
     <!-- Materialize. Availible at https://github.com/Dogfalo/materialize -->
     <!-- Flask-Materialize. Availible at https://github.com/HellerCommaA/flask-materialize -->
     <link href="{{material_find_resource('css/materialize.css', cdn='material')}}" rel="stylesheet" media="screen">
-    
+
 
     {%- endblock styles %}
     {%- endblock head %}
@@ -37,11 +38,15 @@
     {% block scripts %}
     <script src="{{material_find_resource('jquery.js', cdn='jquery')}}"></script>
     <script src="{{material_find_resource('js/materialize.js', cdn='material')}}"></script>
+  
+
     {%- endblock scripts %}
     {% block footer %}
     {%- endblock footer %}
     {%- endblock body %}
+
   </body>
+
 {%- endblock html %}
 </html>
 {% endblock doc -%}
