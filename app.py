@@ -23,7 +23,7 @@ def adder_page():
         vol = None
         conc = None
         KetVol = 0
-        block_info = 0
+
 
 
 
@@ -32,7 +32,7 @@ def adder_page():
             vol = float(request.form["vol"])
             conc = float(request.form["conc"])
             KetVol = int(request.form.get('KetVol'))
-            block_info = request.form.get('block_info')
+            block_info = int(request.form.get('block_info'))
             print(KetVol*1000)
             print(block_info)
         except:

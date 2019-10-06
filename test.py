@@ -3,16 +3,41 @@ def round_half_up(n, decimals=0):
     multiplier = 10 ** decimals
     return math.floor(n*multiplier + 0.5) / multiplier
 
-block_info = 0 
+
+
+def block_info(block_type):
+  if block_type == 1:
+    vol = 30
+    conc = 0.25
+
+  elif block_type == 2:
+    vol = 40
+    conc = 0.125
+  return vol,conc
+
+vol,conc = block_info(1)
+x = block_info(1)
+
+print(x)
+
+
+
+
+
+
+
+
+
+
 
 def do_calculation(wt,vol,conc):
   if (wt >100):
     MaxWt=100
   else:
     MaxWt=wt
-  if (block_info == 1):
-    conc=0.25
-    vol=30
+  vol,conc = block_info(1)
+  print(vol,conc)
+
   maxBupiDose = MaxWt*2
   print(maxBupiDose)
   maxRopiDose = MaxWt*3
@@ -32,11 +57,11 @@ def saline_vol(maxSalVol, ropiVol, adVol, clonVol, KetVol):
 
 
 
-saline = saline_vol(100,do_calculation(110,30,0.25),0.5,0.5,1)
+saline = saline_vol(100,do_calculation(110,vol,conc),0.5,0.5,1)
 print ("saline vol =" + str(saline) + " " + "mls")
 
 
 
 
-final_vol = round_half_up(do_calculation(110,30,0.25),0)
+final_vol = round_half_up(do_calculation(110,vol,conc),0)
 print(final_vol)
