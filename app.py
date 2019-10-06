@@ -19,28 +19,23 @@ def adder_page():
     errors = ""
     if request.method == "POST":
 
-        wt = None
-        vol = None
-        conc = None
         KetVol = 0
+        block_type = 0
 
 
 
 
         try:
             wt = float(request.form["wt"])
-            vol = float(request.form["vol"])
-            conc = float(request.form["conc"])
-            KetVol = int(request.form.get('KetVol'))
             block_info = int(request.form.get('block_info'))
-            print(KetVol*1000)
-            print(block_info)
+            KetVol = int(request.form.get('KetVol'))
+
         except:
             errors
 
-        if wt is not None and vol is not None and conc is not None:
+        if wt is not None:
 
-            result = do_calculation(wt, vol, conc)
-            saline = saline_vol(100,do_calculation(wt, vol, conc),0.5,0.5,(KetVol))
-            return render_template ('result.html').format(result=result,saline=saline, KetVol=KetVol, wt=wt)
+            result = do_calculation(wt,block_type)
+            saline = saline_vol(100,do_calculation(wt,block_type),0.5,0.5,(KetVol))
+            return render_template ('result.html').format(result=result,saline=saline, KetVol=KetVol, wt=wt, block_type=block_type)
     return render_template('calculator.html').format(errors=errors)
