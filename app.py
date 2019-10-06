@@ -18,7 +18,7 @@ def adder_page():
 
     errors = ""
     if request.method == "POST":
-
+        wt=None
         KetVol = 0
         block_type = 0
 
