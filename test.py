@@ -3,11 +3,16 @@ def round_half_up(n, decimals=0):
     multiplier = 10 ** decimals
     return math.floor(n*multiplier + 0.5) / multiplier
 
+block_info = 0 
+
 def do_calculation(wt,vol,conc):
   if (wt >100):
     MaxWt=100
   else:
     MaxWt=wt
+  if (block_info == 1):
+    conc=0.25
+    vol=30
   maxBupiDose = MaxWt*2
   print(maxBupiDose)
   maxRopiDose = MaxWt*3
