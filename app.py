@@ -20,7 +20,8 @@ def adder_page():
     if request.method == "POST":
         wt=None
         KetVol = 0
-        block_type = 0
+        block_info = 0
+
 
 
 
@@ -35,7 +36,7 @@ def adder_page():
 
         if wt is not None:
 
-            result = do_calculation(wt,block_type)
-            saline = saline_vol(100,do_calculation(wt,block_type),0.5,0.5,(KetVol))
-            return render_template ('result.html').format(result=result,saline=saline, KetVol=KetVol, wt=wt, block_type=block_type)
+            result = do_calculation(wt,block_info)
+            saline = saline_vol(100,do_calculation(wt))
+            return render_template ('result.html').format(result=result,saline=saline_vol, KetVol=KetVol, wt=wt, block_info=block_info)
     return render_template('calculator.html').format(errors=errors)
