@@ -15,7 +15,7 @@
     <!-- Flask-Materialize. Availible at https://github.com/HellerCommaA/flask-materialize -->
     <link href="{{material_find_resource('css/materialize.css', cdn='material')}}" rel="stylesheet" media="screen">
 
-
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     {%- endblock styles %}
     <link rel="apple-touch-icon" sizes="512x512" href="/static/images/apple-touch-icon.png" />
 {% endblock %}
@@ -27,69 +27,74 @@
 
 
 <div class="valign-wrapper row app-box">
-    <div class="col card hoverable s12 offset-l2 l8 center-align">
-        <form method="post" action="#">
-            <div class="card-content">
-                <span class="card-title"></span>
-                    <div class="row">
-                        <div class="col s12 offset-l2 l8 center-align">
-                            <h2> HVLIA calculator </h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12 offset-l2 l8">
-                            <input name="wt" type="tel" class="validate">
-                            <label for="weight">Patient Weight (kg) </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12 offset-l2 l8">
-                          <select name="block_info">
-                            <option value="" disabled selected>Choose your block</option>
-                            <option value="1">ACB (30 mls 0.25% Levobupivicaine)</option>
-                            <option value="2">FIB (40 mls 0.125% Levobupivicaine)</option>
-
-                          </select>
-                          <label>Block Type</label>
-
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12 offset-l2 l8">
-                          <select name="KetVol">
-                            <option value="" disabled selected>Is Ketorolac Indicated?</option>
-                            <option value="1">Yes</option>
-                            <option value="0">No</option>
-
-                          </select>
-                          <label>Ketorolac</label>
-
-                        </div>
-                    </div>
-                    <!-- <div class="row">
-                        <div class="col s12 offset-l2 l8 center-align">
-                            <p>
-                             <label>
-                               <input type="checkbox" checked="checked" class="filled-in" name="KetVol" id="KetVol" value="1"/>
-                               <span>Remove tick if Ketorolac is contraindicated</span>
-                             </label>
-                           </p>
-                        </div>
-                    </div> -->
-
-                    <div class="row">
-                        <div class="input-field col s12 offset-l2 l8 center-align">
-                            <button id=btn class="waves-effect waves-light btn-large" value="Do calculation"> Submit </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
+	<div class="col card hoverable s12 offset-l2 l8 center-align">
+		<form action="#" method="post">
+			<div class="card-content">
+				<span class="card-title"></span>
+				<div class="fixed-action-btn">
+				  <a class="btn-floating btn-large red">
+				    <i class="large material-icons">mode_edit</i>
+				  </a>
+				  <ul>
+				    <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+				    <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+				    <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+				    <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+				  </ul>
+				</div>
+				<div class="row">
+					<div class="col s12">
+						<h2>HVLIA calculator</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<input class="validate" name="wt" type="tel"> <label for="weight">Patient Weight (kg)</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<select name="block_info">
+							<option disabled selected value="">Choose your block</option>
+							<option value="1">ACB (30 mls 0.25% Levobupivicaine)</option>
+							<option value="2">FIB (40 mls 0.125% Levobupivicaine)</option>
+						</select>
+						<label>Block Type</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+							<select name="KetVol">
+								<option disabled selected value="">Is Ketorolac Indicated?</option>
+								<option value="1">Indicated</option>
+								<option value="0">Contraindicated</option>
+							</select>
+							<label>Ketorolac</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12 center-align">
+						<button class="waves-effect waves-light btn-large" id="btn" value="Do calculation">Submit</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
 </div>
 
 
 
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large red">
+    <i class="large material-icons">mode_edit</i>
+  </a>
+  <ul>
+    <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+    <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+    <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+    <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+  </ul>
+</div>
 
 
 {% endblock %}
@@ -102,6 +107,7 @@
 
 
   <script src="{{url_for('.static', filename='select.js')}}"></script>
+  <script src="{{url_for('.static', filename='fab.js')}}"></script>
 
 
 
