@@ -27,6 +27,7 @@
 
     {%- endblock styles %}
     {%- endblock head %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body{% block body_attribs %}{% endblock body_attribs %}>
     {% block body -%}
@@ -38,12 +39,24 @@
     {% block scripts %}
     <script src="{{material_find_resource('jquery.js', cdn='jquery')}}"></script>
     <script src="{{material_find_resource('js/materialize.js', cdn='material')}}"></script>
-  
+    <script src="{{url_for('.static', filename='fab.js')}}"></script>
+
 
     {%- endblock scripts %}
     {% block footer %}
     {%- endblock footer %}
     {%- endblock body %}
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large teal">
+        <i class="large material-icons">reorder</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating yellow darken-1" href="/guideline"><i class="material-icons">description</i></a></li>
+        <li><a class="btn-floating  teal"><i class="material-icons">info_outline</i></a></li>
+        <li><a class="btn-floating  teal"><i class="material-icons">info_outline</i></a></li>
+        <li><a class="btn-floating red"><i class="material-icons">warning</i></a></li>
+      </ul>
+    </div>
 
   </body>
 

@@ -15,7 +15,7 @@
     <!-- Flask-Materialize. Availible at https://github.com/HellerCommaA/flask-materialize -->
     <link href="{{material_find_resource('css/materialize.css', cdn='material')}}" rel="stylesheet" media="screen">
 
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		
     {%- endblock styles %}
     <link rel="apple-touch-icon" sizes="512x512" href="/static/images/apple-touch-icon.png" />
 {% endblock %}
@@ -31,17 +31,6 @@
 		<form action="#" method="post">
 			<div class="card-content">
 				<span class="card-title"></span>
-				<div class="fixed-action-btn">
-				  <a class="btn-floating btn-large red">
-				    <i class="large material-icons">mode_edit</i>
-				  </a>
-				  <ul>
-				    <li><a class="btn-floating red"><i class="material-icons" href="/guideline">description</i></a></li>
-				    <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-				    <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-				    <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-				  </ul>
-				</div>
 				<div class="row">
 					<div class="col s12">
 						<h2>HVLIA calculator</h2>
@@ -85,17 +74,6 @@
 
 
 
-<div class="fixed-action-btn">
-  <a class="btn-floating btn-large red">
-    <i class="large material-icons">mode_edit</i>
-  </a>
-  <ul>
-    <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-    <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-    <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-    <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-  </ul>
-</div>
 
 
 {% endblock %}
@@ -108,7 +86,7 @@
 
 	<script src="{{url_for('.static', filename='select.js')}}"></script>
   <script src="{{url_for('.static', filename='select_dropdown.js')}}"></script>
-  <script src="{{url_for('.static', filename='fab.js')}}"></script>
+
 
 
 
