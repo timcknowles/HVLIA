@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, send_file
 from test import do_calculation,round_half_up, saline_vol
 from flask_materialize import Material
 # from decimal import Decimal, getcontext
@@ -9,6 +9,9 @@ app = Flask(__name__)
 Material(app)
 app.config["DEBUG"] = True
 
+@app.route('/guideline/')
+def show_static_pdf():
+    return send_file('static/HVLIA.pdf', attachment_filename='HVLIA.pdf')
 
 @app.route("/", methods=["GET", "POST"])
 def adder_page():
