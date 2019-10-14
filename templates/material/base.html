@@ -27,6 +27,7 @@
 
     {%- endblock styles %}
     {%- endblock head %}
+    <link type="text/css" rel="stylesheet" href="static/css/fab.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body{% block body_attribs %}{% endblock body_attribs %}>
@@ -46,17 +47,39 @@
     {% block footer %}
     {%- endblock footer %}
     {%- endblock body %}
-    <div class="fixed-action-btn">
-      <a class="btn-floating btn-large teal">
-        <i class="large material-icons">reorder</i>
-      </a>
-      <ul>
-        <li><a class="btn-floating yellow darken-1" href="/guideline"><i class="material-icons">description</i></a></li>
-        <li><a class="btn-floating  teal"><i class="material-icons">info_outline</i></a></li>
-        <li><a class="btn-floating  teal"><i class="material-icons">info_outline</i></a></li>
-        <li><a class="btn-floating red"><i class="material-icons">warning</i></a></li>
-      </ul>
-    </div>
+
+    <div class="fixed-action-btn click-to-toggle" style="bottom:24px; right:24px;">
+								<a class="btn-floating btn-large teal">
+									<i class="large material-icons">settings</i>
+								</a>
+								<ul>
+                  <li>
+										<a href="/" class="btn-floating teal" ><i class="material-icons">home</i></a>
+										<a href="/" class="btn-floating mobile-fab-tip">home</a>
+									</li>
+
+									<li>
+										<a href="/guideline" class="btn-floating amber darken-1" ><i class="material-icons">smartphone</i></a>
+										<a href="#" class="btn-floating mobile-fab-tip">guideline</a>
+									</li>
+
+									<li>
+										<a href="#" class="btn-floating amber darken-1"><i class="material-icons">info_outline</i></a>
+										<a href="#" class="btn-floating mobile-fab-tip">ACB / FIB</a>
+									</li>
+
+                  <li>
+										<a href="#" class="btn-floating amber darken-1"><i class="material-icons">info_outline</i></a>
+										<a href="#" class="btn-floating mobile-fab-tip">FIB</a>
+									</li>
+
+									<li>
+										<a href="#" class="btn-floating amber darken-1 modal-trigger"><i class="material-icons">warning</i></a>
+										<a href="#" class="btn-floating mobile-fab-tip modal-trigger">disclaimer</a>
+									</li>
+
+								</ul>
+							</div>
 
   </body>
 
