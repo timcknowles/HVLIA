@@ -13,23 +13,17 @@ app.config["DEBUG"] = True
 def show_static_pdf():
     return send_file('static/HVLIA.pdf', attachment_filename='HVLIA.pdf')
 
+@app.route('/test/')
+def test_page():
+    return render_template('test.html')
+
 @app.route("/", methods=["GET", "POST"])
 def adder_page():
-
-
-
-
     errors = ""
     if request.method == "POST":
         wt=None
         KetVol = 0
         block_info = 0
-
-
-
-
-
-
         try:
             wt = float(request.form["wt"])
             block_info = int(request.form.get('block_info'))

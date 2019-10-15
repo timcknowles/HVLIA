@@ -27,9 +27,10 @@
 
     {%- endblock styles %}
     {%- endblock head %}
-    <!-- <link type="text/css" rel="stylesheet" href="static/css/fab.css"> -->
+    <link type="text/css" rel="stylesheet" href="static/css/hvlia.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
   </head>
   <body{% block body_attribs %}{% endblock body_attribs %}>
     {% block body -%}
@@ -48,6 +49,8 @@
     {% block footer %}
     {%- endblock footer %}
     {%- endblock body %}
+
+
     <div class="fixed-action-btn toolbar">
        <a class="btn-floating btn-large teal">
          <i class="large material-icons">settings</i>
@@ -55,7 +58,7 @@
        <ul>
          <li class="waves-effect waves-light"><a href="/"><i class="material-icons">smartphone</i></a></li>
          <li class="waves-effect waves-light"><a href="/guideline"><i class="material-icons">description</i></a></li>
-         <li class="waves-effect waves-light"><a href="/"><i class="material-icons">info_outline</i></a></li>
+         <li class="waves-effect waves-light"><a href="/test"><i class="material-icons">info_outline</i></a></li>
          <li class="waves-effect waves-light"><a href="/"><i class="material-icons">warning</i></a></li>
        </ul>
      </div>
