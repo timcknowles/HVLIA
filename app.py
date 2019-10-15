@@ -14,9 +14,13 @@ cache_buster.init_app(app)
 def show_static_pdf():
     return send_file('static/HVLIA.pdf', attachment_filename='HVLIA.pdf')
 
-@app.route('/test/')
-def test_page():
-    return render_template('test.html')
+@app.route('/disclaimer/')
+def disclaimer_page():
+    return render_template('disclaimer.html')
+
+@app.route('/blocks/')
+def block_page():
+    return render_template('blocks.html')
 
 @app.route("/", methods=["GET", "POST"])
 def adder_page():
