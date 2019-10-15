@@ -2,7 +2,7 @@
   "name": "HVLIA",
   "lang": "en-GB",
   "start_url": "/",
-  "scope": "/",
+  "scope": "/blocks",
   "display": "standalone",
   "theme_color": "#26a69a",
   "icons": [
