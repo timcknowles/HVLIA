@@ -1,0 +1,14 @@
+{
+  "name": "HVLIA",
+  "lang": "en-GB",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#26a69a",
+  "icons": [
+    {
+      "src": "static/apple-touch-icon.png",
+      "sizes": "512x512"
+    }
+  ]
+}
