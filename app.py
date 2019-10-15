@@ -1,13 +1,14 @@
 from flask import Flask, request, render_template, send_file
 from test import do_calculation,round_half_up, saline_vol
 from flask_materialize import Material
-# from decimal import Decimal, getcontext
-# getcontext().prec = 2
-
+from flask_cachebuster import CacheBuster
 
 app = Flask(__name__)
 Material(app)
 app.config["DEBUG"] = True
+config = { 'extensions': ['.js', '.css'], 'hash_size': 5 }
+cache_buster = CacheBuster(config=config)
+cache_buster.init_app(app)
 
 @app.route('/guideline/')
 def show_static_pdf():
