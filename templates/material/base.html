@@ -26,21 +26,23 @@
 
 
     {%- endblock styles %}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y687HE70G8"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'G-Y687HE70G8');
-    </script>
+
     {%- endblock head %}
     <link type="text/css" rel="stylesheet" href="{{url_for('.static', filename='css/hvlia.css')}}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="manifest" href="{{url_for('.static', filename='manifest.json')}}">
+    {% block scripts %}
+    <script src="{{material_find_resource('jquery.js', cdn='jquery')}}"></script>
+    <script src="{{material_find_resource('js/materialize.js', cdn='material')}}"></script>
+    <script src="{{url_for('.static', filename='toolbar.js')}}"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y687HE70G8"></script>
+    <script src="{{url_for('.static', filename='GA.js')}}"></script>
+
+
+    {%- endblock scripts %}
 
 
   </head>
@@ -51,13 +53,7 @@
     {% block content -%}
     {%- endblock content %}
 
-    {% block scripts %}
-    <script src="{{material_find_resource('jquery.js', cdn='jquery')}}"></script>
-    <script src="{{material_find_resource('js/materialize.js', cdn='material')}}"></script>
-    <script src="{{url_for('.static', filename='toolbar.js')}}"></script>
 
-
-    {%- endblock scripts %}
     {% block footer %}
     {%- endblock footer %}
     {%- endblock body %}
