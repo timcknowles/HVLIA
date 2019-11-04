@@ -26,12 +26,23 @@
 
 
     {%- endblock styles %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y687HE70G8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Y687HE70G8');
+    </script>
     {%- endblock head %}
     <link type="text/css" rel="stylesheet" href="{{url_for('.static', filename='css/hvlia.css')}}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="manifest" href="{{url_for('.static', filename='manifest.json')}}">
+
+
   </head>
   <body{% block body_attribs %}{% endblock body_attribs %}>
     {% block body -%}
@@ -57,10 +68,10 @@
          <i class="large material-icons">add</i>
        </a>
        <ul>
-         <li class="waves-effect waves-light"><a href="/"><i class="material-icons">smartphone</i></a></li>
-         <li class="waves-effect waves-light"><a href="/guideline" target="_blank"><i class="material-icons">description</i></a></li>
-         <li class="waves-effect waves-light"><a href="/blocks"><i class="material-icons">info_outline</i></a></li>
-         <li class="waves-effect waves-light"><a href="/disclaimer"><i class="material-icons">warning</i></a></li>
+         <li class="waves-effect waves-light btn"><a href="/">HOME</a></li>
+         <li class="waves-effect waves-light btn"><a href="/guideline" target="_blank">HVLIA</a></li>
+         <li class="waves-effect waves-light btn"><a href="/erp" target="_blank">ERP</a></li>
+         <li class="waves-effect waves-light btn"><a href="/blocks">BLOCKS</a></li>
        </ul>
      </div>
 

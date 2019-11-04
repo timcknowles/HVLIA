@@ -11,8 +11,12 @@ cache_buster = CacheBuster(config=config)
 cache_buster.init_app(app)
 
 @app.route('/guideline/')
-def show_static_pdf():
+def show_hvlia_static_pdf():
     return send_file('static/HVLIA.pdf', attachment_filename='HVLIA.pdf')
+
+@app.route('/erp')
+def show_erp_static_pdf():
+    return send_file('static/ERP.pdf', attachment_filename='ERP.pdf')
 
 @app.route('/disclaimer/')
 def disclaimer_page():
