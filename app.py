@@ -26,6 +26,14 @@ def disclaimer_page():
 def block_page():
     return render_template('blocks.html')
 
+@app.route('/acb/')
+def acb_page():
+    return render_template('acb.html')
+
+@app.route('/sifib/')
+def fib_page():
+    return render_template('sifib.html')
+
 @app.route("/", methods=["GET", "POST"])
 def adder_page():
     errors = ""
