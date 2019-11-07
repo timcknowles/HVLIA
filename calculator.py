@@ -13,13 +13,15 @@ def do_calculation(wt, block_info):
     MaxWt=wt
 
 
-
-
   if (block_info == 1):
     vol,conc=30,0.25
 
-  else:
+  elif (block_info == 2):
     vol,conc=40,0.125
+
+  else:
+    vol,conc=0,0
+
   print(vol)
 
 
@@ -45,20 +47,14 @@ def do_calculation(wt, block_info):
 
   return round_half_up((RopiDoseHvlia/2),0)
 
-def saline_vol(maxSalVol, ropiVol, adVol, clonVol, KetVol):
-  if (ropiVol>maxSalVol):
-    maxSalVol=ropiVol+KetVol+clonVol+adVol
+def saline_vol(maxBlockVol, ropiVol, adVol, clonVol, KetVol, block_info):
+  if (block_info == 3):
+    maxBlockVol=150
   else:
-    maxSalVol=maxSalVol
-  return maxSalVol-ropiVol-adVol-clonVol-KetVol
+    maxBlockVol=100
 
-
-
-saline = saline_vol(100,do_calculation(110,1),0.5,0.5,1)
-print ("saline vol =" + str(saline) + " " + "mls")
-#
-#
-#
-#
-# final_vol = round_half_up(do_calculation(110,1),0)
-# print(final_vol)
+  if (ropiVol>=maxBlockVol):
+    maxBlockVol=ropiVol+KetVol+clonVol+adVol
+  else:
+    maxBlockVol=maxBlockVol
+  return maxBlockVol-ropiVol-adVol-clonVol-KetVol
