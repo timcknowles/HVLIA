@@ -51,7 +51,7 @@ def adder_page():
             errors
 
         if wt is not None:
-            result = do_calculation(wt,block_info)
-            saline = saline_vol((maxBlockVol),do_calculation(wt,block_info),0.5,0.5,(KetVol),(block_info))
+            result = do_calculation(wt,block_info,KetVol)
+            saline = saline_vol((maxBlockVol),do_calculation(wt,block_info,KetVol),0.5,0.5,(KetVol),(block_info))
             return render_template ('result.html').format(result=result,saline=saline, KetVol=KetVol, wt=wt, block_info=block_info)
     return render_template('calculator.html').format(errors=errors)

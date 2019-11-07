@@ -6,7 +6,7 @@ def round_half_up(n, decimals=0):
 
 
 
-def do_calculation(wt, block_info):
+def do_calculation(wt, block_info, KetVol):
   if (wt >100):
     MaxWt=100
   else:
@@ -42,10 +42,14 @@ def do_calculation(wt, block_info):
   fraction_LA_Remaining = round_half_up((1-fraction_LA_Used),2)
   print(fraction_LA_Remaining)
   RopiDoseHvlia = round_half_up((fraction_LA_Remaining*maxRopiDose),2)
-  print(RopiDoseHvlia/2)
+  RopiVolHvlia = round_half_up((RopiDoseHvlia/2),0)
+  if (block_info==2) and RopiVolHvlia>100:
+    return 100 - KetVol - 1
+  else:
+    return RopiVolHvlia
 
 
-  return round_half_up((RopiDoseHvlia/2),0)
+
 
 def saline_vol(maxBlockVol, ropiVol, adVol, clonVol, KetVol, block_info):
   if (block_info == 3):
@@ -53,8 +57,8 @@ def saline_vol(maxBlockVol, ropiVol, adVol, clonVol, KetVol, block_info):
   else:
     maxBlockVol=100
 
-  if (ropiVol>=maxBlockVol):
-    maxBlockVol=ropiVol+KetVol+clonVol+adVol
+  salvol = maxBlockVol-ropiVol-adVol-clonVol-KetVol
+  if salvol > 1:
+    return salvol
   else:
-    maxBlockVol=maxBlockVol
-  return maxBlockVol-ropiVol-adVol-clonVol-KetVol
+    return 0
