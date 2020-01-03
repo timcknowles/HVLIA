@@ -102,8 +102,10 @@
 {% block scripts %}
 
 {{ super() }}
-	<script src="{{url_for('.static', filename='add.js')}}"></script>
+
 	<script src="{{url_for('.static', filename='registersw.js')}}"></script>
+	<script src="{{url_for('.static', filename='addtohomescreen.js')}}"></script>
+	<script src="{{url_for('.static', filename='add.js')}}"></script>
 	<script src="{{url_for('.static', filename='select.js')}}"></script>
   <script src="{{url_for('.static', filename='select_dropdown.js')}}"></script>
   <script src="{{url_for('.static', filename='modal.js')}}"></script>

@@ -9,7 +9,9 @@ app.config["DEBUG"] = True
 config = { 'extensions': ['.js', '.css'], 'hash_size': 5 }
 cache_buster = CacheBuster(config=config)
 cache_buster.init_app(app)
-
+@app.route('/sw.js', methods=['GET'])
+def sw():
+    return app.send_static_file('sw.js')
 @app.route('/guideline/')
 def show_hvlia_static_pdf():
     return send_file('static/HVLIA.pdf', attachment_filename='HVLIA.pdf')
