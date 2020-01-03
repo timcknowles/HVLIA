@@ -2,7 +2,6 @@ Click==7.0
 Flask==1.1.1
 Flask-CacheBuster==1.0.0
 Flask-Materialize==0.2.4
-Flask-WTF==0.14.2
 gunicorn==19.9.0
 itsdangerous==1.1.0
 Jinja2==2.10.1

@@ -6,6 +6,10 @@
   "background_color": "#26a69a",
   "display": "standalone",
   "orientation": "portrait",
+  "serviceworker": {
+    "src": "sw.js",
+    "scope": "/"
+  },
   "Scope": "/",
   "start_url": "/",
   "icons": [
