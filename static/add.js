@@ -1,9 +1,9 @@
 addToHomescreen({
   appID: "com.herokuapp.hvlia",
              appName: "HVLIA",
-             lifespan: 15,
+             lifespan: 150,
              autostart: true,
-             skipFirstVisit: true,
+             skipFirstVisit: false,
              minSessions: 1,
              displayPace: 0,
              customPrompt: {

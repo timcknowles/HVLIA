@@ -324,7 +324,7 @@
 		appName: "Progressive Web App",
 		debug: true, // override browser checks
 		logging: true, // log reasons for showing or not showing to js console; defaults to true when debug is true
-		modal: false, // prevent further actions until the message is closed
+		modal: true, // prevent further actions until the message is closed
 		mandatory: false, // you can't proceed if you don't add the app to the homescreen
 		autostart: true, // show the message automatically
 		skipFirstVisit: false, // show only to returning visitors (ie: skip the first time you visit)
@@ -341,7 +341,7 @@
 		onAdd: null, // when the application is launched the first time from the homescreen (guesstimate)
 		onInstall: null,
 		onCancel: null,
-		customCriteria: null,
+		customCriteria: true,
 		manualPrompt: null,
 		customPrompt: {}, //allow customization of prompt content
 		athWrapper: ".ath-container",
