@@ -8,9 +8,9 @@ addToHomescreen({
              displayPace: 0,
              customPrompt: {
                  title: "Install HVLIA?",
-                 src: "meta/favicon-96x96.png",
+                 src: "static/images/icons/icon-96x96.png",
                  cancelMsg: "Cancel",
                  installMsg: "Install"
              }
-        
+
 });

@@ -87,10 +87,10 @@
 		platform.isCompatible = ( platform.isChromium || platform.isMobileSafari ||
 			platform.isSamsung || platform.isFireFox || platform.isOpera );
 
-		// console.log( "platform.isiPhone: " + platform.isiPhone );
-		// console.log( "platform.isMobileSafari: " + platform.isMobileSafari );
-		// console.log( "platform.isInWebAppiOS: " + platform.isInWebAppiOS );
-		// console.log( "platform.isCompatible: " + platform.isCompatible );
+		console.log( "platform.isiPhone: " + platform.isiPhone );
+		console.log( "platform.isMobileSafari: " + platform.isMobileSafari );
+		console.log( "platform.isInWebAppiOS: " + platform.isInWebAppiOS );
+		console.log( "platform.isCompatible: " + platform.isCompatible );
 
 	}
 
@@ -322,8 +322,8 @@
 	ath.defaults = {
 		appID: appID, // local storage name (no need to change)
 		appName: "Progressive Web App",
-		debug: false, // override browser checks
-		logging: false, // log reasons for showing or not showing to js console; defaults to true when debug is true
+		debug: true, // override browser checks
+		logging: true, // log reasons for showing or not showing to js console; defaults to true when debug is true
 		modal: false, // prevent further actions until the message is closed
 		mandatory: false, // you can't proceed if you don't add the app to the homescreen
 		autostart: true, // show the message automatically
