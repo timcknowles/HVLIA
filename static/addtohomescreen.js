@@ -52,7 +52,7 @@
 	var platform = {},
 		defaultPrompt = {
 			title: "Install this PWA?",
-			src: "imgs/pwa-logo-50x50.png",
+			src: "/static/imgs/pwa-logo-50x50.png",
 			cancelMsg: "Not Now",
 			installMsg: "Install"
 		};
@@ -375,7 +375,7 @@
 					"animated", "fadeIn", "d-block", "right-banner"
 				],
 				imgs: [ {
-					src: "imgs/edge-a2hs-icon.png",
+					src: "/static/imgs/edge-a2hs-icon.png",
 					alt: "Tap the Add to Homescreen Icon"
 				} ]
 			},
@@ -385,7 +385,7 @@
 					"animated", "fadeIn", "d-block", "right-banner"
 				],
 				imgs: [ {
-					src: "imgs/chromium-guidance.png",
+					src: "/static/imgs/chromium-guidance.png",
 					alt: "Tap the Add to Homescreen Icon"
 				} ]
 			},
@@ -393,18 +393,18 @@
 				targetUrl: undefined,
 				showClasses: [ "iphone-wrapper", "animated", "fadeIn", "d-block" ],
 				imgs: [ {
-						src: "imgs/ios-safari-share-button-highlight.jpg",
+						src: "/static/imgs/ios-safari-share-button-highlight.jpg",
 						alt: "Tap the Share Icon"
 					},
 					{
-						src: "imgs/iphone-a2hs-swipe-to-right.jpg",
+						src: "/static/imgs/iphone-a2hs-swipe-to-right.jpg",
 						classes: [ "animated", "fadeIn", "overlay-1",
 							"delay-2s"
 						],
 						alt: "Swipe to the right"
 					},
 					{
-						src: "imgs/iphone-a2hs-icon-highlight.jpg",
+						src: "/static/imgs/iphone-a2hs-icon-highlight.jpg",
 						classes: [ "animated", "fadeIn", "overlay-2",
 							"delay-4s"
 						],
@@ -416,7 +416,7 @@
 				targetUrl: undefined,
 				showClasses: [ "ipad-wrapper", "animated", "fadeInUp", "d-block" ],
 				imgs: [ {
-					src: "imgs/safari-ipad-share-a2hs-right.jpg",
+					src: "/static/imgs/safari-ipad-share-a2hs-right.jpg",
 					alt: "Tap the Add to Homescreen Icon"
 				} ]
 			},
@@ -426,7 +426,7 @@
 					"animated", "fadeIn", "d-block"
 				],
 				imgs: [ {
-					src: "imgs/firefox-a2hs-icon.png",
+					src: "/static/imgs/firefox-a2hs-icon.png",
 					alt: "Tap the Add to Homescreen Icon"
 				} ]
 			},
@@ -436,7 +436,7 @@
 					"animated", "fadeIn", "d-block"
 				],
 				imgs: [ {
-					src: "imgs/samsung-internet-a2hs-icon.png",
+					src: "/static/imgs/samsung-internet-a2hs-icon.png",
 					alt: "Tap the Add to Homescreen Icon"
 				} ]
 			},
@@ -446,7 +446,7 @@
 					"animated", "fadeIn", "d-block"
 				],
 				imgs: [ {
-					src: "imgs/opera-add-to-homescreen.png",
+					src: "/static/imgs/opera-add-to-homescreen.png",
 					alt: "Tap the Add to Homescreen Icon"
 				} ]
 			}
