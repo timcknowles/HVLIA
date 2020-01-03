@@ -19,6 +19,8 @@
     {%- endblock styles %}
     <link rel="apple-touch-icon" sizes="512x512" href="/static/images/apple-touch-icon.png" />
 
+
+
 {% endblock %}
 
 
@@ -100,10 +102,11 @@
 {% block scripts %}
 
 {{ super() }}
-
+	<script src="{{url_for('.static', filename='add.js')}}"></script>
 	<script src="{{url_for('.static', filename='select.js')}}"></script>
   <script src="{{url_for('.static', filename='select_dropdown.js')}}"></script>
   <script src="{{url_for('.static', filename='modal.js')}}"></script>
+
 
 
 

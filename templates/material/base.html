@@ -25,16 +25,19 @@
     <link href="{{material_find_resource('css/materialize.css', cdn='material')}}" rel="stylesheet" media="screen">
 
 
+
     {%- endblock styles %}
 
 
     {%- endblock head %}
     <link type="text/css" rel="stylesheet" href="{{url_for('.static', filename='css/hvlia.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{url_for('.static', filename='css/addtohomescreen.css')}}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="manifest" href="{{url_for('.static', filename='manifest.json')}}">
     {% block scripts %}
+    <script src="{{url_for('.static', filename='addtohomescreen.js')}}"></script>
     <script src="{{material_find_resource('jquery.js', cdn='jquery')}}"></script>
     <script src="{{material_find_resource('js/materialize.js', cdn='material')}}"></script>
     <script src="{{url_for('.static', filename='toolbar.js')}}"></script>
@@ -44,6 +47,7 @@
 
 
     {%- endblock scripts %}
+    
 
 
   </head>
