@@ -26,7 +26,26 @@
 
 
     {%- endblock styles %}
+
+
     {%- endblock head %}
+    <link type="text/css" rel="stylesheet" href="{{url_for('.static', filename='css/hvlia.css')}}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="manifest" href="{{url_for('.static', filename='manifest.json')}}">
+    {% block scripts %}
+    <script src="{{material_find_resource('jquery.js', cdn='jquery')}}"></script>
+    <script src="{{material_find_resource('js/materialize.js', cdn='material')}}"></script>
+    <script src="{{url_for('.static', filename='toolbar.js')}}"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151516732-1"></script>
+    <script src="{{url_for('.static', filename='GA.js')}}"></script>
+
+
+
+    {%- endblock scripts %}
+
+
   </head>
   <body{% block body_attribs %}{% endblock body_attribs %}>
     {% block body -%}
@@ -35,15 +54,57 @@
     {% block content -%}
     {%- endblock content %}
 
-    {% block scripts %}
-    <script src="{{material_find_resource('jquery.js', cdn='jquery')}}"></script>
-    <script src="{{material_find_resource('js/materialize.js', cdn='material')}}"></script>
-  
 
-    {%- endblock scripts %}
     {% block footer %}
     {%- endblock footer %}
     {%- endblock body %}
+
+
+    <div class="fixed-action-btn toolbar">
+       <a class="btn-floating btn-large teal">
+         <i class="large material-icons">menu</i>
+       </a>
+       <ul>
+         <li class="waves-effect waves-light btn-flat teal lighten-2"><a href="/">HOME</a></li>
+         <li class="waves-effect waves-light btn-flat teal"><a href="/guideline" target="_blank">HVLIA</a></li>
+         <li class="waves-effect waves-light btn-flat teal lighten-2"><a href="/erp" target="_blank">ERP</a></li>
+         <li class="waves-effect waves-light btn-flat teal"><a href="/blocks">BLOCKS</a></li>
+       </ul>
+     </div>
+
+    <!-- <div class="fixed-action-btn click-to-toggle" style="bottom:24px; right:24px;">
+								<a class="btn-floating btn-large teal">
+									<i class="large material-icons">settings</i>
+								</a>
+								<ul>
+                  <li>
+										<a href="/" class="btn-floating teal" ><i class="material-icons">home</i></a>
+										<a href="/" class="btn-floating mobile-fab-tip">home</a>
+									</li>
+
+									<li>
+										<a href="/guideline" class="btn-floating amber darken-1" ><i class="material-icons">smartphone</i></a>
+										<a href="#" class="btn-floating mobile-fab-tip">guideline</a>
+									</li>
+
+									<li>
+										<a href="#" class="btn-floating amber darken-1"><i class="material-icons">info_outline</i></a>
+										<a href="#" class="btn-floating mobile-fab-tip">ACB / FIB</a>
+									</li>
+
+                  <li>
+										<a href="#" class="btn-floating amber darken-1"><i class="material-icons">info_outline</i></a>
+										<a href="#" class="btn-floating mobile-fab-tip">FIB</a>
+									</li>
+
+									<li>
+										<a href="#" class="btn-floating amber darken-1 modal-trigger"><i class="material-icons">warning</i></a>
+										<a href="#" class="btn-floating mobile-fab-tip modal-trigger">disclaimer</a>
+									</li>
+
+								</ul>
+							</div> -->
+
 
   </body>
 
