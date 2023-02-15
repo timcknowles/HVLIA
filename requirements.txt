@@ -8,4 +8,4 @@ itsdangerous==1.1.0
 Jinja2==2.10.1
 MarkupSafe==1.1.1
 newrelic==5.2.0.127
-Werkzeug==0.16.0
+Werkzeug==2.2.3
