@@ -1,5 +1,5 @@
 Click==7.0
-Flask==1.1.1
+Flask==2.3.2
 Flask-CacheBuster==1.0.0
 Flask-Materialize==0.2.4
 Flask-WTF==0.14.2
